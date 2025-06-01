@@ -935,57 +935,186 @@
         width: 100%;
     }
         
-        /* Responsive */
-        @media (max-width: 992px) {
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-            
-            .section-title {
-                font-size: 2.5rem;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .hero {
-                padding: 100px 0;
-            }
-            
-            .hero-text h1 {
-                font-size: 1.5rem;
-            }
-            
-            .hero-text h2 {
-                font-size: 1.5rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .timeline::before {
-                left: 30px;
-            }
-            
-            .timeline-item:nth-child(odd),
-            .timeline-item:nth-child(even) {
-                padding-left: 70px;
-                padding-right: 0;
-                text-align: left;
-            }
-            
-            .timeline-dot {
-                left: 30px;
-            }
-            
-            .timeline-item:nth-child(odd) .timeline-content::before,
-            .timeline-item:nth-child(even) .timeline-content::before {
-                left: -15px;
-                border-width: 15px 15px 15px 0;
-                border-color: transparent var(--accent) transparent transparent;
-                right: auto;
-            }
-        }
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* General scaling */
+    html {
+        font-size: 14px;
+    }
+    
+    /* Hero section */
+    .hero {
+        padding: 60px 0;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        gap: 30px;
+        flex-direction: column;
+    }
+    
+    .profile-image {
+        min-width: 200px;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.3rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .contact-info {
+        align-items: center;
+    }
+    
+    /* Sections */
+    section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+    
+    /* About section */
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .about-text, .skills {
+        min-width: 100%;
+    }
+    
+    .skill-tag {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+    
+    /* Projects */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Timeline */
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        padding-left: 50px;
+    }
+    
+    .timeline-dot {
+        left: 20px;
+    }
+    
+    /* Certifications */
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certification-badge {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+        margin: -30px auto 15px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 50px 0 30px;
+    }
+    
+    .signature {
+        font-size: 2rem;
+    }
+    
+    /* Contact items */
+    .contact-item {
+        font-size: 1rem;
+    }
+    
+    /* Project cards */
+    .project-content {
+        padding: 20px;
+    }
+    
+    .project-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Timeline content */
+    .timeline-content {
+        padding: 15px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Achievement items */
+    .achievement-item {
+        padding: 20px;
+    }
+    
+    .achievement-item h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Even smaller screens */
+    html {
+        font-size: 13px;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.6rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .profile-image {
+        max-width: 200px;
+    }
+    
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .skill-tags {
+        gap: 10px;
+    }
+}
         .ripple-effect {
     position: absolute;
     border-radius: 50%;
